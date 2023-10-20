@@ -1,0 +1,12 @@
+{
+    "contatos": [
+
+    ],
+    "eventos": [
+      {
+        "id": 1,
+        "nome": "Super Evento de Programação",
+        "tipo": "Javascript"
+      }
+    ]
+}

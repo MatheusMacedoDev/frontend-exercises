@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event+</h1>
+    <form action="">
+        <label for="todoId"></label>
+        <input type="number" name="todoId" id="todoId">
+        <button type="send" id="b">Call API</button>
+    </form>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+        
+        
+        document.querySelector('form').addEventListener('submit', async event => {
+            event.preventDefault();
+            
+            const id = document.getElementById('todoId').value;
+            const url = `https://jsonplaceholder.typicode.com/todos/${id}`;
+            
+            try {
+                const promise = await axios.get(url);
+                const data = promise.data;
+                const text = document.createElement('p'); 
+    
+                text.innerText = JSON.stringify(data);
+    
+                document.body.appendChild(text);
+            } catch (err) {
+                console.log(err);
+            }
+        });
+    </script>
+</body>
+</html>
