@@ -1,0 +1,52 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    width: 250px;
+    height: 250px;
+
+    padding: 30px;
+    margin: 30px;
+
+    background-color: none;
+    border: 2px solid #821B47;
+    border-radius: 5px;
+}
+
+.card__title {
+    font-size: 18px;
+    font-family: 'Poppins-Medium';
+}
+
+.card__text {
+    font-size: 16px;
+    font-family: 'Poppins-Regular';
+    text-align: center;
+}
+
+.card__button {
+    color: #B51D44;
+
+    font-size: 18px;
+    font-family: 'Poppins-Medium';
+
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.card__button:hover {
+    cursor: pointer;
+    color: #8f1735;
+}
+
+.card__button--disabled {
+    color: #606060;
+}
+
+.card__button--disabled:hover {
+    cursor: pointer;
+    color: #333333;
+}
